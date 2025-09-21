@@ -1,25 +1,25 @@
 // src/pages/HomePage.jsx
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import HeroBanner from "../components/HeroBanner";
-import TestimonialsSlider from "../components/TestimonialsSlider";
-import { FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import HeroBanner from '../components/HeroBanner';
+import TestimonialsSlider from '../components/TestimonialsSlider';
+import { FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Slider images
-import p12 from "../assets/c1.jpg";
-import p10 from "../assets/c2.jpg";
-import p11 from "../assets/c4.jpg";
-import p13 from "../assets/c5.jpg";
-import p14 from "../assets/spicex.png";
-import mapp from "../assets/mappp.png";
+import p12 from '../assets/c1.jpg';
+import p10 from '../assets/c2.jpg';
+import p11 from '../assets/c4.jpg';
+import p13 from '../assets/c5.jpg';
+import p14 from '../assets/spicex.png';
+import mapp from '../assets/mappp.png';
 
 // Product images
-import spicesBanner from "../assets/SPX.PNG";
-import herbsBanner from "../assets/hubs.png";
-import dehydratedBanner from "../assets/dehy.png";
-import paste from "../assets/vp.jpg";
+import spicesBanner from '../assets/spx.png';
+import herbsBanner from '../assets/hubs.png';
+import dehydratedBanner from '../assets/dehy.png';
+import paste from '../assets/vp.jpg';
 
 export default function HomePage() {
   const slides = [p12, p10, p11, p13, p14];
@@ -79,23 +79,23 @@ export default function HomePage() {
             {/* Right Text */}
             <div className="space-y-6">
               <h2 className="text-5xl font-extrabold text-green-800 leading-tight">
-                🌍 Building{" "}
+                🌍 Building{' '}
                 <span className="text-green-600">Global Connections</span>
               </h2>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our mission is to{" "}
+                Our mission is to{' '}
                 <span className="font-semibold text-green-700">
                   bridge the gap
-                </span>{" "}
-                between <span className="italic">local growers</span> and{" "}
+                </span>{' '}
+                between <span className="italic">local growers</span> and{' '}
                 <span className="italic">international markets</span> by
-                delivering{" "}
+                delivering{' '}
                 <span className="text-green-800 font-bold">
                   premium-quality products
                 </span>
-                . We combine <span className="underline">tradition</span> with{" "}
-                <span className="underline">innovation</span> to bring the{" "}
+                . We combine <span className="underline">tradition</span> with{' '}
+                <span className="underline">innovation</span> to bring the{' '}
                 <span className="font-semibold">best of nature</span> to the
                 world.
               </p>
@@ -107,14 +107,14 @@ export default function HomePage() {
                 <div className="grid gap-4">
                   {[
                     {
-                      icon: "✔",
-                      title: "Dehydrated Products",
-                      desc: "Fresh fruits & vegetables, processed with care to preserve flavor, aroma, and nutrients.",
+                      icon: '✔',
+                      title: 'Dehydrated Products',
+                      desc: 'Fresh fruits & vegetables, processed with care to preserve flavor, aroma, and nutrients.',
                     },
                     {
-                      icon: "✔",
-                      title: "Spices",
-                      desc: "Authentic, aromatic, and sourced from trusted farms for unmatched purity.",
+                      icon: '✔',
+                      title: 'Spices',
+                      desc: 'Authentic, aromatic, and sourced from trusted farms for unmatched purity.',
                     },
                   ].map((item, idx) => (
                     <div
@@ -129,7 +129,7 @@ export default function HomePage() {
                         <p>
                           <strong className="text-green-800">
                             {item.title}:
-                          </strong>{" "}
+                          </strong>{' '}
                           {item.desc}
                         </p>
                       </div>
@@ -145,14 +145,14 @@ export default function HomePage() {
                 <div className="grid gap-4">
                   {[
                     {
-                      icon: "🌱",
-                      title: "Quality Assurance",
-                      desc: "Every step monitored with strict quality checks.",
+                      icon: '🌱',
+                      title: 'Quality Assurance',
+                      desc: 'Every step monitored with strict quality checks.',
                     },
                     {
-                      icon: "🌐",
-                      title: "Global Reach",
-                      desc: "Delivering trusted exports with tailored trade solutions.",
+                      icon: '🌐',
+                      title: 'Global Reach',
+                      desc: 'Delivering trusted exports with tailored trade solutions.',
                     },
                   ].map((item, idx) => (
                     <div
@@ -167,7 +167,7 @@ export default function HomePage() {
                         <p>
                           <strong className="text-green-800">
                             {item.title}:
-                          </strong>{" "}
+                          </strong>{' '}
                           {item.desc}
                         </p>
                       </div>
@@ -195,11 +195,19 @@ export default function HomePage() {
           </h2>
 
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
-            {[ 
-              { img: spicesBanner, title: "Spices", link: "/products/spices" },
-              { img: herbsBanner, title: "Herbs", link: "/products/herbs" },
-              { img: dehydratedBanner, title: "Dehydrated products", link: "/products/dehydrated" },
-              { img: paste, title: "Vegetable Paste", link: "/products/Vegetable" },
+            {[
+              { img: spicesBanner, title: 'Spices', link: '/products/spices' },
+              { img: herbsBanner, title: 'Herbs', link: '/products/herbs' },
+              {
+                img: dehydratedBanner,
+                title: 'Dehydrated products',
+                link: '/products/dehydrated',
+              },
+              {
+                img: paste,
+                title: 'Vegetable Paste',
+                link: '/products/Vegetable',
+              },
             ].map((product, idx) => (
               <div
                 key={idx}
@@ -270,7 +278,7 @@ export default function HomePage() {
                   key={index}
                   onClick={() => setCurrent(index)}
                   className={`w-3 h-3 rounded-full ${
-                    index === current ? "bg-green-700" : "bg-green-300"
+                    index === current ? 'bg-green-700' : 'bg-green-300'
                   }`}
                 />
               ))}
@@ -315,7 +323,7 @@ export default function HomePage() {
         transition={{
           duration: 1,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         <FaWhatsapp size={28} />

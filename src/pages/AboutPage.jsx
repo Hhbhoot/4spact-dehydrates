@@ -1,43 +1,40 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 // ✅ Import your images
-import bannerImg from "../assets/a2.png"; 
-import spicesImg from "../assets/bannenr.png";
-import fruitsImg from "../assets/a1.png";
-import mi from "../assets/miss.jpg";
-import mii from "../assets/mis.jpg";
+import bannerImg from '../assets/a2.png';
+import spicesImg from '../assets/bannenr.png';
+import fruitsImg from '../assets/a1.png';
+import mi from '../assets/miss.jpg';
+import mii from '../assets/mis.jpg';
 
+import aa1 from '../assets/aa1.png';
+import aa2 from '../assets/aa2.png';
+import aa3 from '../assets/aa3.png';
+import { FaWhatsapp } from 'react-icons/fa';
 
-import aa1 from "../assets/aa1.png";
-import aa2 from "../assets/aa2.png";
-import aa3 from "../assets/aa3.png";
-import { FaWhatsapp } from "react-icons/fa";
-
-
-import s from "../assets/SPX.PNG";
-import h from "../assets/hubs.png";
-import d from "../assets/dehy.png";
-import p from "../assets/vp.jpg";
-
+import s from '../assets/spx.png';
+import h from '../assets/hubs.png';
+import d from '../assets/dehy.png';
+import p from '../assets/vp.jpg';
 
 export default function AboutUs() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const features = [
     {
-      title: "Quality Assurance",
-      desc: "Strict quality control ensures that every product meets the highest global standards.",
+      title: 'Quality Assurance',
+      desc: 'Strict quality control ensures that every product meets the highest global standards.',
       img: aa1,
     },
     {
-      title: "Global Reach",
-      desc: "An extensive network that exports products across international destinations.",
+      title: 'Global Reach',
+      desc: 'An extensive network that exports products across international destinations.',
       img: aa2,
     },
     {
-      title: "Customer-Centric Approach",
-      desc: "Building long-term relationships with reliable service, competitive pricing, and tailored solutions.",
+      title: 'Customer-Centric Approach',
+      desc: 'Building long-term relationships with reliable service, competitive pricing, and tailored solutions.',
       img: aa3,
     },
   ];
@@ -80,7 +77,7 @@ export default function AboutUs() {
             whileHover={{
               scale: 1.08,
               boxShadow:
-                "0px 0px 20px rgba(249, 115, 22, 0.8), 0px 0px 40px rgba(249, 115, 22, 0.6)",
+                '0px 0px 20px rgba(249, 115, 22, 0.8), 0px 0px 40px rgba(249, 115, 22, 0.6)',
             }}
             transition={{ duration: 0.3 }}
             className="inline-block mt-8 px-8 py-3 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-full shadow-lg transition"
@@ -176,71 +173,70 @@ export default function AboutUs() {
         </div>
       </section> */}
 
-
-
       {/* What We Offer */}
-<section className="py-16 bg-white">
-  <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-10">What We Offer</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
-      {[
-        {
-          title: "Dehydrated Products",
-          desc: "A diverse selection of dehydrated fruits, vegetables, and more. Our process preserves natural goodness for culinary and industrial use.",
-          img: d,
-        },
-        {
-          title: "Spices",
-          desc: "Exporting authentic, pure, and aromatic spices directly from trusted farms, loved by clients worldwide.",
-          img: s,
-        },
-        {
-          title: "Vegetable Pastes",
-          desc: "Ready-to-use pastes made from fresh vegetables, ensuring convenience and authentic taste for kitchens and industries.",
-          img: p,
-        },
-        {
-          title: "Herbs",
-          desc: "Premium dried herbs with natural aroma and flavor, perfect for seasoning, herbal blends, and medicinal use.",
-          img: h,
-        },
-      ].map((item, idx) => (
-        <motion.div
-          key={idx}
-          whileHover={{
-            scale: 1.05,
-            boxShadow:
-              "0px 0px 25px rgba(249, 115, 22, 0.8), 0px 0px 50px rgba(249, 115, 22, 0.6)",
-          }}
-          transition={{ duration: 0.3 }}
-          className="relative group p-6 rounded-2xl border-2 border-transparent overflow-hidden"
-          style={{
-            backgroundImage: `url(${item.img})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          {/* Glowing Border */}
-          <div className="absolute inset-0 rounded-2xl border-2 border-orange-400 opacity-0 group-hover:opacity-100 shadow-[0_0_25px_6px_rgba(249,115,22,0.7)] transition duration-500"></div>
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            What We Offer
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
+            {[
+              {
+                title: 'Dehydrated Products',
+                desc: 'A diverse selection of dehydrated fruits, vegetables, and more. Our process preserves natural goodness for culinary and industrial use.',
+                img: d,
+              },
+              {
+                title: 'Spices',
+                desc: 'Exporting authentic, pure, and aromatic spices directly from trusted farms, loved by clients worldwide.',
+                img: s,
+              },
+              {
+                title: 'Vegetable Pastes',
+                desc: 'Ready-to-use pastes made from fresh vegetables, ensuring convenience and authentic taste for kitchens and industries.',
+                img: p,
+              },
+              {
+                title: 'Herbs',
+                desc: 'Premium dried herbs with natural aroma and flavor, perfect for seasoning, herbal blends, and medicinal use.',
+                img: h,
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow:
+                    '0px 0px 25px rgba(249, 115, 22, 0.8), 0px 0px 50px rgba(249, 115, 22, 0.6)',
+                }}
+                transition={{ duration: 0.3 }}
+                className="relative group p-6 rounded-2xl border-2 border-transparent overflow-hidden"
+                style={{
+                  backgroundImage: `url(${item.img})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+                {/* Glowing Border */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-orange-400 opacity-0 group-hover:opacity-100 shadow-[0_0_25px_6px_rgba(249,115,22,0.7)] transition duration-500"></div>
 
-          {/* Dark Overlay for Readability */}
-          <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
+                {/* Dark Overlay for Readability */}
+                <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
 
-          <div className="relative z-10">
-            <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-yellow-300 transition">
-              {item.title}
-            </h3>
-            <p className="text-gray-100 group-hover:text-white transition">
-              {item.desc}
-            </p>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-yellow-300 transition">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-100 group-hover:text-white transition">
+                    {item.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
 
       {/* Collage Section */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-orange-50 via-white to-green-50">
@@ -280,15 +276,15 @@ export default function AboutUs() {
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Whether it’s aromatic spices, nourishing fruits, or flavorful
-              vegetable pastes, our products are crafted to bring authentic taste
-              and quality to your table.
+              vegetable pastes, our products are crafted to bring authentic
+              taste and quality to your table.
             </p>
             <motion.a
               href="/products"
               whileHover={{
                 scale: 1.08,
                 boxShadow:
-                  "0px 0px 20px rgba(249, 115, 22, 0.8), 0px 0px 40px rgba(249, 115, 22, 0.6)",
+                  '0px 0px 20px rgba(249, 115, 22, 0.8), 0px 0px 40px rgba(249, 115, 22, 0.6)',
               }}
               transition={{ duration: 0.3 }}
               className="inline-block px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-semibold rounded-full shadow-lg transition"
@@ -299,45 +295,46 @@ export default function AboutUs() {
         </div>
       </section>
 
-    {/* Why Choose Us */}
-    <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 text-center space-y-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">Why Choose Us?</h2>
-        <div className="grid md:grid-cols-3 gap-10 text-left">
-          {features.map((feature, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{
-                scale: 1.05,
-                boxShadow:
-                  "0px 0px 25px rgba(34, 197, 94, 0.8), 0px 0px 50px rgba(34, 197, 94, 0.6)",
-              }}
-              transition={{ duration: 0.3 }}
-              className="relative group p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-green-500 overflow-hidden"
-              style={{
-                backgroundImage: `url(${feature.img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-black/40 rounded-2xl"></div>
+      {/* Why Choose Us */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 text-center space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            Why Choose Us?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10 text-left">
+            {features.map((feature, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow:
+                    '0px 0px 25px rgba(34, 197, 94, 0.8), 0px 0px 50px rgba(34, 197, 94, 0.6)',
+                }}
+                transition={{ duration: 0.3 }}
+                className="relative group p-6 rounded-2xl shadow-lg border-2 border-transparent hover:border-green-500 overflow-hidden"
+                style={{
+                  backgroundImage: `url(${feature.img})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              >
+                {/* Overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/40 rounded-2xl"></div>
 
-              <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-green-200 transition">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-200 group-hover:text-white transition">
-                  {feature.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+                <div className="relative z-10">
+                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-green-200 transition">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-200 group-hover:text-white transition">
+                    {feature.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
 
       {/* Contact Us */}
       <section
@@ -348,32 +345,32 @@ export default function AboutUs() {
           <h2 className="text-3xl md:text-4xl font-bold">Contact Us</h2>
           <p className="text-lg text-gray-700">
             📧 Email: info@4spactdehydrates.com
-            <br/>
+            <br />
             📧 Email: export@4spactdehydrates.com
-            <br/>
+            <br />
             📧 Email: sales@4spactdehydrates.com
           </p>
         </div>
       </section>
 
-       {/* Floating WhatsApp Button */}
-           <motion.a
-             href="https://wa.me/message/HSSSFL36LZXQF1"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 transition duration-300 z-50"
-             animate={{
-               y: [0, -50, 0],
-               scale: [1, 1.1, 1],
-             }}
-             transition={{
-               duration: 1,
-               repeat: Infinity,
-               ease: "easeInOut",
-             }}
-           >
-             <FaWhatsapp size={28} />
-           </motion.a>
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href="https://wa.me/message/HSSSFL36LZXQF1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 transition duration-300 z-50"
+        animate={{
+          y: [0, -50, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      >
+        <FaWhatsapp size={28} />
+      </motion.a>
     </motion.main>
   );
 }
