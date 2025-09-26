@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -8,9 +8,8 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   // Falocattion,
-  FaMapMarkerAlt
-} from "react-icons/fa";
-
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -23,7 +22,7 @@ export default function Footer() {
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* Company Info */} 
+          {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold text-green-400 mb-4">
               4spact Dehydrates
@@ -57,7 +56,7 @@ export default function Footer() {
               <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300 ease-in-out shadow-[0_0_8px_#22c55e]"></span>
             </a>
 
-              <a
+            <a
               href="tel:+919104751841"
               className="relative flex items-center gap-2 text-gray-400 font-medium mb-2 group transition"
             >
@@ -66,7 +65,7 @@ export default function Footer() {
               <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300 ease-in-out shadow-[0_0_8px_#22c55e]"></span>
             </a>
             <a
-              href="mailto:info@4spact.com"
+              href="mailto:info@4spactdehydrates.com"
               className="relative flex items-center gap-2 text-gray-400 font-medium mb-2 group transition"
             >
               <FaEnvelope className="text-green-400" />
@@ -74,11 +73,9 @@ export default function Footer() {
               <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300 ease-in-out shadow-[0_0_8px_#22c55e]"></span>
             </a>
             <p className="relative flex items-center gap-4 text-gray-400 font-medium mb-2 group transition">
-             <FaMapMarkerAlt className="text-green-400" />
-              New police line, Vidhyanagar, Bhavnagar,
-              Gujarat, India - 364002
+              <FaMapMarkerAlt className="text-green-400" />
+              New police line, Vidhyanagar, Bhavnagar, Gujarat, India - 364002
               <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300 ease-in-out shadow-[0_0_8px_#22c55e]"></span>
-
             </p>
           </div>
 
@@ -88,12 +85,12 @@ export default function Footer() {
               Quick Links
             </h3>
             {[
-              { href: "/", label: "Home" },
-              { href: "/about", label: "About" },
-              { href: "/products", label: "Products" },
-              { href: "/services", label: "Services" },
-              { href: "/contact", label: "Contact" },
-              { href: "/inquiry", label: "inquiry" },
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/products', label: 'Products' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact' },
+              { href: '/inquiry', label: 'inquiry' },
             ].map((link, i) => (
               <a
                 key={i}
@@ -133,7 +130,6 @@ export default function Footer() {
               >
                 <FaInstagram size={20} />
               </a>
-              
             </div>
           </div>
         </div>
@@ -141,7 +137,8 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-center">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} 4spact Import-Export. All rights reserved.
+            &copy; {new Date().getFullYear()} 4spact Import-Export. All rights
+            reserved.
           </p>
         </div>
       </div>

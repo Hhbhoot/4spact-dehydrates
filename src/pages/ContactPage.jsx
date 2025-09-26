@@ -1,7 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaMapPin } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaMapPin,
+} from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function InquiryPage() {
   return (
@@ -15,10 +20,10 @@ export default function InquiryPage() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           whileHover={{
             scale: 1.03,
-            transition: { duration: 0.4, type: "spring", stiffness: 200 },
+            transition: { duration: 0.4, type: 'spring', stiffness: 200 },
           }}
           className="relative rounded-3xl shadow-lg p-10 space-y-6 overflow-hidden 
                      bg-white/80 backdrop-blur-lg hover:shadow-[0_0_30px_8px_rgba(34,197,94,0.6)] 
@@ -33,19 +38,27 @@ export default function InquiryPage() {
 
           <div className="space-y-6 relative z-10">
             {/* Address */}
-            <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4 group">
+            <motion.div
+              whileHover={{ x: 10 }}
+              className="flex items-start space-x-4 group"
+            >
               <div className="bg-green-100 p-3 rounded-full shadow group-hover:bg-green-600 transition-all duration-300">
                 <FaMapMarkerAlt className="text-green-700 group-hover:text-white text-xl transition-transform duration-300 group-hover:scale-110" />
               </div>
               <p className="text-gray-700 leading-relaxed">
-                4Spact Dehydrates<br />
-                police line, Vidhyanagar, Bhavnagar,<br/>
+                4Spact Dehydrates
+                <br />
+                police line, Vidhyanagar, Bhavnagar,
+                <br />
                 Gujarat, India - 364002
               </p>
             </motion.div>
 
             {/* Phone */}
-            <motion.div whileHover={{ x: 10 }} className="flex items-center space-x-4 group">
+            <motion.div
+              whileHover={{ x: 10 }}
+              className="flex items-center space-x-4 group"
+            >
               <div className="bg-green-100 p-3 rounded-full shadow group-hover:bg-green-600 transition-all duration-300">
                 <FaPhoneAlt className="text-green-700 group-hover:text-white text-xl transition-transform duration-300 group-hover:scale-110" />
               </div>
@@ -53,15 +66,15 @@ export default function InquiryPage() {
             </motion.div>
 
             {/* Email */}
-            <motion.div whileHover={{ x: 10 }} className="flex items-center space-x-4 group">
+            <motion.div
+              whileHover={{ x: 10 }}
+              className="flex items-center space-x-4 group"
+            >
               <div className="bg-green-100 p-3 rounded-full shadow group-hover:bg-green-600 transition-all duration-300">
                 <FaEnvelope className="text-green-700 group-hover:text-white text-xl transition-transform duration-300 group-hover:scale-110" />
               </div>
-              <p className="text-gray-700">info@4spactdehydrates.com
-            </p>
+              <p className="text-gray-700">info@4spactdehydrates.com</p>
             </motion.div>
-
-          
           </div>
         </motion.div>
       </div>
@@ -70,7 +83,7 @@ export default function InquiryPage() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
         className="relative rounded-none overflow-hidden shadow-lg h-[500px] mt-12"
       >
         <iframe
@@ -84,26 +97,24 @@ export default function InquiryPage() {
           referrerPolicy="no-referrer-when-downgrade"
         />
 
-
-         <motion.a
-                href="https://wa.me/message/HSSSFL36LZXQF1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 transition duration-300 z-50"
-                animate={{
-                  y: [0, -50, 0],
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 1,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <FaWhatsapp size={28} />
-              </motion.a>
+        <motion.a
+          href="https://wa.me/message/HSSSFL36LZXQF1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 transition duration-300 z-50"
+          animate={{
+            y: [0, -50, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        >
+          <FaWhatsapp size={28} />
+        </motion.a>
       </motion.div>
     </main>
   );
 }
-

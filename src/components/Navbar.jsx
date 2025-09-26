@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import logo from "../assets/logox.png";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import logo from '../assets/logox.png';
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -9,7 +9,7 @@ import {
   FaWhatsapp,
   FaPhoneAlt,
   FaEnvelope,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +19,10 @@ export default function Navbar() {
   };
 
   const imagevariants = {
-    initial: { x: "100%" },
+    initial: { x: '100%' },
     animate: {
-      x: "0%",
-      transition: { duration: 0.5, ease: "easeInOut" },
+      x: '0%',
+      transition: { duration: 0.5, ease: 'easeInOut' },
     },
     exit: { opacity: 0, scale: 0.9 },
   };
@@ -44,33 +44,33 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {["Home", "About", "Products", "Services", "Contact","inquiry"].map(
+          {['Home', 'About', 'Products', 'Services', 'Contact', 'inquiry'].map(
             (item, index) => (
               <Link
                 key={index}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                 className="relative text-gray-800 font-medium transition group"
               >
                 {item}
                 {/* Animated underline with glow */}
                 <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-600 group-hover:w-full transition-all duration-300 ease-in-out shadow-[0_0_6px_#22c55e]"></span>
               </Link>
-            )
+            ),
           )}
 
           {/* Phone & Email (Desktop only) */}
           <div className="flex flex-col text-sm text-gray-700 border-l pl-6 border-gray-300 space-y-2">
-              {/* Phone */}
-              <a
-                href="tel:+919512604868"
-                className="flex items-center gap-2 hover:text-green-600 transition font-medium"
-              >
-                <FaPhoneAlt className="text-green-500" />
-                +91 9512604868
-              </a>
+            {/* Phone */}
+            <a
+              href="tel:+919512604868"
+              className="flex items-center gap-2 hover:text-green-600 transition font-medium"
+            >
+              <FaPhoneAlt className="text-green-500" />
+              +91 9512604868
+            </a>
 
-              {/* Phone 2 */}
-              {/* <a
+            {/* Phone 2 */}
+            {/* <a
                 href="tel:+919104751841"
                 className="flex items-center gap-2 hover:text-green-600 transition font-medium"
               >
@@ -78,15 +78,15 @@ export default function Navbar() {
                 +91 9104751841
               </a> */}
 
-              {/* Email */}
-              <a
-                href="mailto:info@4spact.com"
-                className="flex items-center gap-2 hover:text-green-600 transition font-medium"
-              >
-                <FaEnvelope className="text-green-500" />
-                info@4spact.com
-              </a>
-            </div>
+            {/* Email */}
+            <a
+              href="mailto:info@4spactdehydrates.com"
+              className="flex items-center gap-2 hover:text-green-600 transition font-medium"
+            >
+              <FaEnvelope className="text-green-500" />
+              info@4spactdehydrates.com
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -130,18 +130,23 @@ export default function Navbar() {
           className="md:hidden bg-black text-white px-6 py-6 shadow-lg shadow-black"
         >
           <div className="flex flex-col space-y-4">
-            {["Home", "About", "Products", "Services", "Contact","inquiry"].map(
-              (item, index) => (
-                <Link
-                  key={index}
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className="hover:text-green-400 transition font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
-                </Link>
-              )
-            )}
+            {[
+              'Home',
+              'About',
+              'Products',
+              'Services',
+              'Contact',
+              'inquiry',
+            ].map((item, index) => (
+              <Link
+                key={index}
+                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                className="hover:text-green-400 transition font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                {item}
+              </Link>
+            ))}
           </div>
 
           {/* Contact Info (Mobile) */}
@@ -153,10 +158,10 @@ export default function Navbar() {
               📞 +91 9512604868
             </a>
             <a
-              href="mailto:info@4spact.com"
+              href="mailto:info@4spactdehydrates.com"
               className="block text-white hover:text-green-400 transition mb-2"
             >
-              ✉ info@4spact.com
+              ✉ info@4spactdehydrates.coms
             </a>
           </div>
 
