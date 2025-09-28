@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 // ✅ Import your images
@@ -20,6 +21,10 @@ import p from '../assets/vp.jpg';
 
 export default function AboutUs() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  // SEO Helmet
+  const pageTitle = 'About Us | 4spact Dehydrates';
+  const pageDesc =
+    'Learn about 4spact, our mission, quality assurance, global reach, and customer-centric approach in the import-export industry.';
 
   const features = [
     {
@@ -46,6 +51,10 @@ export default function AboutUs() {
       transition={{ duration: 0.6 }}
       className="bg-gradient-to-b from-green-50 via-white to-orange-50 text-gray-800"
     >
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+      </Helmet>
       {/* Banner Section */}
       <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         <img

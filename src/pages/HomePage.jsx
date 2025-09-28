@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import HeroBanner from '../components/HeroBanner';
 import TestimonialsSlider from '../components/TestimonialsSlider';
+import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -25,6 +26,11 @@ export default function HomePage() {
   const slides = [p12, p10, p11, p13, p14];
   const [current, setCurrent] = useState(0);
 
+  // SEO Helmet
+  const pageTitle = 'Home | 4spact Dehydrates';
+  const pageDesc =
+    'Premium dehydrated foods, spices, and natural products. Global export solutions for healthy living, culinary excellence, and sustainable sourcing.';
+
   const nextSlide = () => {
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
@@ -43,6 +49,10 @@ export default function HomePage() {
 
   return (
     <div>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+      </Helmet>
       <motion.main
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

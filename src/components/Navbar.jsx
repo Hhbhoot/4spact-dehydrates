@@ -44,7 +44,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {['Home', 'About', 'Products', 'Services', 'Contact', 'inquiry'].map(
+          {['Home', 'About', 'Products', 'Services', 'Contact', 'Inquiry'].map(
             (item, index) => (
               <Link
                 key={index}
@@ -136,7 +136,7 @@ export default function Navbar() {
               'Products',
               'Services',
               'Contact',
-              'inquiry',
+              'Inquiry',
             ].map((item, index) => (
               <Link
                 key={index}

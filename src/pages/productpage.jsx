@@ -1,79 +1,7 @@
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import { categories } from "../assets/productData";
-// import { FaWhatsapp } from "react-icons/fa";
-
-// export default function ProductPage() {
-//   const { id } = useParams();
-//   let product = null;
-
-//   categories.forEach((cat) => {
-//     const found = cat.products.find((p) => p.id === parseInt(id));
-//     if (found) product = found;
-//   });
-
-//   if (!product) {
-//     return <div className="text-center py-20 text-red-600 font-bold">Product not found!</div>;
-//   }
-
-//   return (
-//     <section className="py-16 bg-gray-50">
-//       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row gap-10">
-//         {/* Left: Product Image */}
-//         <div className="flex-1 flex justify-center items-start">
-//           <img
-//             src={product.image}
-//             alt={product.name}
-//             className="max-w-full h-auto rounded-lg shadow-md"
-//           />
-//         </div>
-
-//         {/* Right: Product Info */}
-//         <div className="flex-1 flex flex-col justify-center space-y-6">
-//           <h1 className="text-3xl font-bold text-green-800">{product.name}</h1>
-//           <p className="text-gray-700 text-lg">{product.description}</p>
-
-//           <ul className="list-disc list-inside text-gray-600 space-y-2">
-//             {product.features.map((feat, idx) => (
-//               <li key={idx}>{feat}</li>
-//             ))}
-//           </ul>
-
-//           <button className="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
-//             {product.ctaText}
-//           </button>
-//         </div>
-//       </div>
-
-//        {/* Floating WhatsApp Button */}
-//       <motion.a
-//         href="https://wa.me/message/HSSSFL36LZXQF1"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 transition duration-300 z-50"
-//         animate={{
-//           y: [0, -50, 0],
-//           scale: [1, 1.1, 1],
-//         }}
-//         transition={{
-//           duration: 1,
-//           repeat: Infinity,
-//           ease: "easeInOut",
-//         }}
-//       >
-//         <FaWhatsapp size={28} />
-//       </motion.a>
-//     </section>
-//   );
-// }
-
-
-
-import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { categories } from "../assets/productData";
-import { FaWhatsapp } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { useParams, Link } from 'react-router-dom';
+import { categories } from '../assets/productData';
+import { FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -123,17 +51,15 @@ export default function ProductPage() {
               <li key={idx}>{feat}</li>
             ))}
           </ul>
-          
-          <button>
-          <Link
-            to="/contact"
-            className="mt-6 inline-block bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-green-400 hover:scale-105 transform transition-all duration-300 font-semibold tracking-wide text-center"
-          >
-            {product.ctaText}
-          </Link>
-          </button>
 
-       
+          <button>
+            <Link
+              to="/contact"
+              className="mt-6 inline-block bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-green-400 hover:scale-105 transform transition-all duration-300 font-semibold tracking-wide text-center"
+            >
+              {product.ctaText}
+            </Link>
+          </button>
         </motion.div>
       </div>
 
@@ -150,7 +76,7 @@ export default function ProductPage() {
         transition={{
           duration: 1,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
       >
         <FaWhatsapp size={28} />
