@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import { FaWhatsapp } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 export default function ContactPage() {
   const pageTitle = 'Inquiry | 4spact Dehydrates';

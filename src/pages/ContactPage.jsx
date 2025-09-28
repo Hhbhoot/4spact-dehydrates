@@ -7,7 +7,7 @@ import {
   FaMapPin,
 } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 export default function InquiryPage() {
   const pageTitle = 'Contact | 4spact Dehydrates';

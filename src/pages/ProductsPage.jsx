@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { categories } from '../assets/productData';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 export default function ProductsPage() {
   const pageTitle = 'Products | 4spact Dehydrates';

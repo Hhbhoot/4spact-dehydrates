@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import HeroBanner from '../components/HeroBanner';
 import TestimonialsSlider from '../components/TestimonialsSlider';
-import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -21,6 +20,7 @@ import spicesBanner from '../assets/spx.png';
 import herbsBanner from '../assets/hubs.png';
 import dehydratedBanner from '../assets/dehy.png';
 import paste from '../assets/vp.jpg';
+import { Helmet } from 'react-helmet';
 
 export default function HomePage() {
   const slides = [p12, p10, p11, p13, p14];

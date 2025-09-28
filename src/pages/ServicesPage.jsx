@@ -12,7 +12,7 @@ import {
   Headset,
   TrendingUp,
 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 export default function ServicePage() {
   const pageTitle = 'Services | 4spact Dehydrates';

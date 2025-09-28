@@ -111,25 +111,20 @@
 
 // export default Testimonials;
 
-
-import React, { useState } from "react";
-import { assets, testimonialsData } from "../assets/assets";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState } from 'react';
+import { assets, testimonialsData } from '../assets/assets';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function Testimonials() {
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? testimonialsData.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) =>
-      prev === testimonialsData.length - 1 ? 0 : prev + 1
-    );
+    setCurrent((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -215,8 +210,8 @@ function Testimonials() {
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               current === index
-                ? "bg-green-600 shadow-[0_0_8px_#22c55e]"
-                : "bg-gray-300"
+                ? 'bg-green-600 shadow-[0_0_8px_#22c55e]'
+                : 'bg-gray-300'
             }`}
           ></button>
         ))}
