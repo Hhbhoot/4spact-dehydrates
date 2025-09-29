@@ -57,14 +57,6 @@ export default function Footer() {
             </a>
 
             <a
-              href="tel:+919104751841"
-              className="relative flex items-center gap-2 text-gray-400 font-medium mb-2 group transition"
-            >
-              <FaPhoneAlt className="text-green-400" />
-              +91 8320141430
-              <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-green-400 group-hover:w-full transition-all duration-300 ease-in-out shadow-[0_0_8px_#22c55e]"></span>
-            </a>
-            <a
               href="mailto:info@4spactdehydrates.com"
               className="relative flex items-center gap-2 text-gray-400 font-medium mb-2 group transition"
             >
@@ -110,16 +102,18 @@ export default function Footer() {
             </h3>
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://www.facebook.com/share/15uTHsZJt5/"
+                href="https://www.facebook.com/share/178EfRUgAR/"
                 className="text-gray-400 hover:text-green-400 transition transform hover:scale-110"
                 aria-label="Facebook"
+                target="_blank"
               >
                 <FaFacebookF size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/in/hardik-baraiya-9bb35a374"
+                href="https://www.linkedin.com/in/4spact-dehydrates-732166386?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 className="text-gray-400 hover:text-green-400 transition transform hover:scale-110"
                 aria-label="LinkedIn"
+                target="_blank"
               >
                 <FaLinkedinIn size={20} />
               </a>
@@ -127,6 +121,7 @@ export default function Footer() {
                 href="https://www.instagram.com/4__spact?igsh=bzZxcmJvZGc0N3d5"
                 className="text-gray-400 hover:text-green-400 transition transform hover:scale-110"
                 aria-label="Instagram"
+                target="_blank"
               >
                 <FaInstagram size={20} />
               </a>
